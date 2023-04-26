@@ -1,15 +1,9 @@
 import styles, { layout } from '../style';
 import { apple, bill, google } from '../assets';
-import useScrollAnimation from '../utils/UseScrollAnimation';
+
 const Billing = () => {
-  const [ref, isVisible] = useScrollAnimation();
   return (
-    <section
-      ref={ref}
-      id="product"
-      className={`${layout.sectionReverse} ${
-        isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-5'
-      } transition-all duration-500 `}>
+    <section id="product" className={`${layout.sectionReverse}`}>
       <div className={layout.sectionImgReverse}>
         <img src={bill} className="w-[100%] h-[100%] relative z-[5]" />
         <div className="top-0 -left-1/2 white__gradient z-[3] absolute rounded-full w-[50%] h-[50%]"></div>
